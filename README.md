@@ -1,3 +1,11 @@
+# Angular 7 Example Project
+
+## #CodeConfident
+This repository is the fifth chosen challenge on [my journey of becoming #CodeConfident](https://www.lisihocke.com/p/codeconfident.html).
+
+## Scope
+The scope for this practice project is to implement a small new frontend feature to practice TypeScript, Angular and product development.
+
 <p align="center">
   <a href="https://angular.io/">
     <img src="https://www.angularexampleapp.com/assets/images/angular.svg" alt="Logo" width=72 height=72>
@@ -34,7 +42,6 @@
 - [What's included](#whats-included)
 - [Quick start](#quick-start)
 - [Bugs and feature requests](#bugs-and-feature-requests)
-- [Apply this to your project](#apply-this-to-your-project)
 - [Contributing](#contributing)
 - [Creators](#creators)
 - [Thanks](#thanks)
