@@ -36,7 +36,7 @@ describe('PersonalHeroesPage', () => {
       providers: [
         {provide: MatSnackBar, useValue: matSnackBarSpy},
         {provide: HeroService, useValue: heroServiceSpy},
-        {provide: TRANSLATIONS, useValue: require(`raw-loader!./../../../../i18n/messages.en.xlf`)},
+        {provide: TRANSLATIONS, useValue: require(`raw-loader!./../../../../../i18n/messages.en.xlf`)},
         {provide: TRANSLATIONS_FORMAT, useValue: 'xlf'},
         I18n
       ]
