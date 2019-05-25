@@ -37,6 +37,13 @@
           <context context-type="linenumber">4</context>
         </context-group>
       </trans-unit>
+      <trans-unit id="personalHeroes" datatype="html">
+        <source>My personal heroes</source><target state="final">My personal heroes</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/modules/heroes/pages/personal-heroes-page/personal-heroes-page.component.html</context>
+          <context context-type="linenumber">4</context>
+        </context-group>
+      </trans-unit>
       <trans-unit id="error404" datatype="html">
         <source>404 Error</source><target state="final">404 Error</target>
         <context-group purpose="location">

@@ -5,6 +5,7 @@ import {SharedModule} from '../../shared/shared.module';
 import {HeroRemoveComponent} from './components/hero-remove/hero-remove.component';
 import {HeroesListPageComponent} from './pages/heroes-list-page/heroes-list-page.component';
 import {HeroDetailPageComponent} from './pages/hero-detail-page/hero-detail-page.component';
+import {PersonalHeroesPageComponent} from './pages/personal-heroes-page/personal-heroes-page.component';
 
 @NgModule({
   imports: [
@@ -16,7 +17,8 @@ import {HeroDetailPageComponent} from './pages/hero-detail-page/hero-detail-page
   declarations: [
     HeroesListPageComponent,
     HeroDetailPageComponent,
-    HeroRemoveComponent
+    HeroRemoveComponent,
+    PersonalHeroesPageComponent
   ],
   entryComponents: [
     HeroRemoveComponent
