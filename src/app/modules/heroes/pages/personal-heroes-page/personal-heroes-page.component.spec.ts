@@ -50,7 +50,7 @@ describe('PersonalHeroesPage', () => {
 
     fixtureWithOnePersonalHero = TestBed.createComponent(PersonalHeroesPageComponent);
     component = fixtureWithOnePersonalHero.debugElement.componentInstance;
-    var heroList = [new Hero({name: 'hero test'}), new Hero({name: 'hero2 test2'})];
+    const heroList = [new Hero({name: 'hero test'}), new Hero({name: 'hero2 test2'})];
     heroList[1].personalHero = true;
     heroServiceSpy.getHeroes.and.returnValue(of(heroList));
     fixtureWithOnePersonalHero.detectChanges();

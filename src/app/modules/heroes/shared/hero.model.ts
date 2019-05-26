@@ -27,7 +27,7 @@ export class Hero implements Deserializable {
   like() {
     this.likes += 1;
     this.personalHero = true;
-    //TODO: change to an array of ids
+    // TODO: change to an array of ids
     localStorage.setItem(this.id, this.name);
   }
 
