@@ -106,6 +106,7 @@ describe('HeroesListPageComponent', () => {
     const hero = new Hero({likes: 0});
     component.like(hero);
     expect(hero.likes).toBe(1);
+    expect(hero.personalHero).toBe(true);
   }));
 
   it('should delete a hero', (() => {

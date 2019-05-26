@@ -18,6 +18,7 @@ import {By} from '@angular/platform-browser';
 describe('PersonalHeroesPage', () => {
   let component: PersonalHeroesPageComponent;
   let fixture: ComponentFixture<PersonalHeroesPageComponent>;
+  let fixtureWithOnePersonalHero: ComponentFixture<PersonalHeroesPageComponent>;
   const heroServiceSpy = jasmine.createSpyObj('HeroService', ['getHeroes']);
   const matSnackBarSpy = jasmine.createSpyObj('MatSnackBar', ['open']);
 
@@ -46,15 +47,28 @@ describe('PersonalHeroesPage', () => {
     component = fixture.debugElement.componentInstance;
     heroServiceSpy.getHeroes.and.returnValue(of([new Hero({name: 'hero test'})]));
     fixture.detectChanges();
+
+    fixtureWithOnePersonalHero = TestBed.createComponent(PersonalHeroesPageComponent);
+    component = fixtureWithOnePersonalHero.debugElement.componentInstance;
+    var heroList = [new Hero({name: 'hero test'}), new Hero({name: 'hero2 test2'})];
+    heroList[1].personalHero = true;
+    heroServiceSpy.getHeroes.and.returnValue(of(heroList));
+    fixtureWithOnePersonalHero.detectChanges();
   });
 
   it('should create component', (() => {
     expect(component).toBeTruthy();
   }));
 
-  it('should initialize heroes', async(() => {
+  it('should initialize heroes with no personal heroes', async(() => {
     fixture.whenStable().then(() => {
-      expect(fixture.debugElement.queryAll(By.css('app-hero-card')).length).toBe(1);
+      expect(fixture.debugElement.queryAll(By.css('app-hero-card')).length).toBe(0);
+    });
+  }));
+
+  it('should initialize heroes with 1 personal hero', async(() => {
+    fixtureWithOnePersonalHero.whenStable().then(() => {
+      expect(fixtureWithOnePersonalHero.debugElement.queryAll(By.css('app-hero-card')).length).toBe(1);
     });
   }));
 });

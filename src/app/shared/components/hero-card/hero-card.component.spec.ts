@@ -59,5 +59,6 @@ describe('HeroCardComponent', () => {
     const hero = new Hero({likes: 1});
     hero.like();
     expect(hero.likes).toBe(2);
+    expect(hero.personalHero).toBe(true);
   });
 });

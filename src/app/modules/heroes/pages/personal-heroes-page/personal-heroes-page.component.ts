@@ -18,7 +18,9 @@ export class PersonalHeroesPageComponent implements OnInit {
 
   ngOnInit() {
     this.heroes$ = this.heroService.getHeroes().pipe(
-      map((heroes) => heroes),
+      map((heroes) => heroes.filter(function(hero) {
+        return (hero.personalHero)
+      })),
       defaultIfEmpty([])
     );
   }
